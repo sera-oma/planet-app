@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planet | Planetary Facts</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="Planet logo" />
+    </a>
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+      <span id="theme-label">DARK</span>
+      <img id="theme-icon" src="images/moon.svg" alt="" />
+    </button>
+  </header>
+
+  <main>
+
+    <!-- SEARCH -->
+    <section class="search-section" aria-label="Search planets">
+      <form id="search-form" class="search-form" role="search">
+        <img src="images/search.svg" alt="" class="search-icon" />
+        <label for="search-input" class="visually-hidden">Planet name</label>
+        <input
+          type="text"
+          id="search-input"
+          name="planet"
+          placeholder="Search planet name..."
+          autocomplete="off"
+        />
+        <span id="search-error" class="search-error" hidden>No results</span>
+        <button type="submit" class="btn-search">Search</button>
+      </form>
+    </section>
+
+    <!-- PLANET CARD -->
+    <section id="planet-result" aria-live="polite">
+
+      <article id="planet-card" class="planet-card">
+        <img id="planet-image" class="planet-image" src="" alt="" />
+
+        <div class="planet-info">
+          <h2 id="planet-name">Earth</h2>
+          <p id="planet-type" class="planet-type">Terrestrial</p>
+          <p id="planet-description" class="planet-description"></p>
+
+          <dl class="planet-stats">
+            <div>
+              <dt>Gravity</dt>
+              <dd id="planet-gravity"></dd>
+            </div>
+            <div>
+              <dt>Mass</dt>
+              <dd id="planet-mass"></dd>
+            </div>
+            <div>
+              <dt>Period</dt>
+              <dd id="planet-period"></dd>
+            </div>
+          </dl>
+
+          <ul class="planet-details">
+            <li><img src="images/temperature.svg" alt="Temperature" /> <span id="planet-temperature"></span></li>
+            <li><img src="images/moon-count.svg" alt="Moons" /> <span id="planet-moons"></span></li>
+            <li><img src="images/diameter.svg" alt="Diameter" /> <span id="planet-diameter"></span></li>
+            <li><img src="images/distance.svg" alt="Distance from sun" /> <span id="planet-distance"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ERROR CARD -->
+      <article id="error-card" class="error-card" hidden>
+        <h2>No results found!</h2>
+        <p>We couldn't find any planet matching your search. Please double-check the name and try again.</p>
+      </article>
+
+    </section>
+
+    <!-- FACTS TABLE -->
+    <section class="facts-section" aria-labelledby="facts-heading">
+      <h2 id="facts-heading">Planetary Facts at a Glance</h2>
+      <p>
+        Below is a comparative table of major planets in our solar system. The data highlights
+        key physical properties used by astronomers and researchers worldwide.
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <caption>Data about the planets of our solar system (Planetary facts taken from NASA)</caption>
+          <thead>
+            <tr>
+              <th scope="col" colspan="2"><span class="visually-hidden">Category</span></th>
+              <th scope="col">Name</th>
+              <th scope="col">Mass (10<sup>24</sup>kg)</th>
+              <th scope="col">Diameter (km)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4" colspan="2">Terrestrial Planets</th>
+              <td>Mercury</td><td>0.330</td><td>4,878</td>
+            </tr>
+            <tr><td>Venus</td><td>0.330</td><td>4,878</td></tr>
+            <tr><td>Earth</td><td>0.330</td><td>4,878</td></tr>
+            <tr><td>Mars</td><td>0.330</td><td>4,878</td></tr>
+
+            <tr>
+              <th scope="rowgroup" rowspan="4">Jovian Planets</th>
+              <th scope="rowgroup" rowspan="2">Gas Giants</th>
+              <td>Jupiter</td><td>0.330</td><td>4,878</td>
+            </tr>
+            <tr><td>Saturn</td><td>0.330</td><td>4,878</td></tr>
+
+            <tr>
+              <th scope="rowgroup" rowspan="2">Ice Giants</th>
+              <td>Uranus</td><td>0.330</td><td>4,878</td>
+            </tr>
+            <tr><td>Neptune</td><td>0.330</td><td>4,878</td></tr>
+
+            <tr>
+              <th scope="rowgroup" colspan="2">Dwarf Planets</th>
+              <td>Pluto</td><td>0.330</td><td>4,878</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <section class="about">
+      <h2>About</h2>
+      <p>First name of group members</p>
+    </section>
+
+    <section class="credits">
+      <p>
+        &copy;2026 Design by <a href="https://amakandukwu.com" target="_blank" rel="noopener">Amaka N</a><br />
+        Built by <a href="https://github.com/sera-oma" target="_blank" rel="noopener">GroupName</a>.
+        All rights reserved<br />
+        <a href="https://tsacademyonline.com/" target="_blank" rel="noopener">TSAcademy</a>
+      </p>
+    </section>
+  </footer>
+
+</body>
+</html>
